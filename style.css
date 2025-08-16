@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  max-width: 350px;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.goal {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  height: 15px;
+  margin: 0 8px;
+  background: #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#progress {
+  height: 100%;
+  width: 0;
+  background: #000;
+  transition: width 0.3s;
+}
+
+#currentInfo {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  gap: 5px;
+}
+
+.input-box, .percent-box {
+  padding: 8px;
+  background: #d4e4f9;
+  border-radius: 8px;
+  min-width: 60px;
+  font-size: 14px;
+  border: none;
+  text-align: center;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #8fb3e7;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: #6d9ee6;
+}
+
+.history {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.history li {
+  background: #eef4ff;
+  margin: 3px 0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Кола */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+.circle.big {
+  top: -60px;
+  left: -100px;
+  width: 220px;
+  height: 220px;
+  background: rgba(143, 179, 231, 0.5);
+}
+.circle.small {
+  top: 120px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  background: rgba(143, 179, 231, 0.5);
+}
+.circle.medium {
+  top: 50px;
+  right: 120px;
+  width: 100px;
+  height: 100px;
+  background: rgba(143, 179, 231, 0.5);
+}
+
+/* адаптивність */
+@media (max-width: 400px) {
+  .inputs {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
