@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лічильник води</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="circle big"></div>
+  <div class="circle small"></div>
+  <div class="circle medium"></div>
+
+  <div class="container">
+    <div class="header-title">Лічильник випитої води за день</div>
+
+    <div class="icon">💧</div>
+    <div class="goal">Ціль: <span id="goal">2000</span> мл</div>
+
+    <div class="progress-container">
+      <span>0%</span>
+      <div class="progress-bar">
+        <div id="progress"></div>
+      </div>
+      <span>100%</span>
+    </div>
+
+    <div id="currentInfo">Випито: 0 мл із 2000 мл</div>
+
+    <div class="inputs">
+      <input type="number" id="waterInput" value="200" min="50" step="50" class="input-box">
+      <button onclick="addWater()">Додати воду</button>
+      <div class="percent-box" id="percentBox">0%</div>
+    </div>
+
+    <div id="date"></div>
+
+    <a href="settings.html">Налаштування</a>
+
+    <div class="history">
+      <h3>Історія (останні 7 днів)</h3>
+      <ul id="historyList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
